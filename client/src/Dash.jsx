@@ -2,7 +2,6 @@ import React from 'react';
 import Do from './Dash.module.css';
 import { Link } from 'react-router-dom';
 import Tableadmin from './components/Tableadmin';
-import Addinfo from './components/Addinfo';
 
 function Dash() {
   return (
