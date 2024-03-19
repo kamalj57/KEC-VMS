@@ -56,20 +56,7 @@ function Tableadmin() {
     }
   };
 
-  const handleAddRow = () => {
-    const newData = [...tableData];
-    newData.push({
-      id: newData.length + 1,
-      driver_name: '',
-      vehicle_number: '',
-      vehicle_company: '',
-      engine_type: '',
-      department: '',
-      last_service: '',
-      next_service: ''
-    });
-    setTableData(newData);
-  };
+
 
   const filteredData = tableData.filter((data) => {
     return (
