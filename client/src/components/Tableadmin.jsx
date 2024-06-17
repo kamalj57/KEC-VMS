@@ -48,7 +48,7 @@ function Tableadmin() {
       const res= await axios.delete(`${baseUrl}/api/v1/delete/${id}`)
       .then((res)=> {
         toast.success('deleted successfully');
-         fetchData();})
+        fetchData();})
       .catch(()=>{
         toast.error("Failed to delete")
       })
