@@ -1,6 +1,8 @@
-# KEC VEHICLE MANAGEMENT SYSTEM
+# KEC VEHICLE MANAGEMENT SYSTEM 🚌
 
-This application utilizes Vite + React for the frontend, MERN stack (MongoDB, Express, Node.js) for the server,twilio for sending messages.
+This application was developed during the intra-college event `E-Horyzon'24` and won the prize 🏅 
+
+## Preview
 
 ## Table of Contents
 
