@@ -22,7 +22,11 @@ label{
 }
 
 .header {
+  display: flex;
+  align-items: center;
   line-height: 10px;
+  text-align: center;
+  gap: 3px;
 }
 
 .form {

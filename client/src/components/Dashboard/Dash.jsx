@@ -12,7 +12,7 @@ function Dash() {
           <div className={Do.main12}>
           <div className={Do.lk1}>
              <Home color="white"/>
-             <Link to="/" className={Do.lk}>Home</Link>
+             <Link to="/dashboard" className={Do.lk}>Home</Link>
           </div>
           <div className={Do.lk1}>
             <BusFront color='white' />

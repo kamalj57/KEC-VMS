@@ -1,8 +1,7 @@
 import  { useState, useEffect } from 'react';
 import axios from 'axios';
 import To from '../Table/Table.module.css';
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { Toaster, toast } from 'react-hot-toast';
 import moment from 'moment'
 import {Trash} from 'lucide-react'
 
@@ -17,7 +16,7 @@ function Tableadmin() {
   const baseUrl=import.meta.env.VITE_REACT_APP_API;
   useEffect(() => {
     fetchData();
-  }, []);
+  }, [tableData]);
 
   const fetchData = () => {
     axios.get(`${baseUrl}/api/v1/businfo`)
@@ -44,7 +43,6 @@ function Tableadmin() {
 
   const handleDeleteRow = async(id) => {
     const shouldDelete = window.confirm('Are you sure you want to delete this row?');
-    console.log(id)
     if (shouldDelete) {
       const res= await axios.delete(`${baseUrl}/api/v1/delete/${id}`)
       .then(()=> {
@@ -70,7 +68,7 @@ function Tableadmin() {
 
   return (
     <div>
-      <ToastContainer />
+      <Toaster position='top-right' />
       <div className={To.main1}>
         <input
           type='search'

@@ -1,10 +1,9 @@
 import './Signin.css'
 import { useState } from 'react';
 import axios from 'axios';
-import { toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+import { Toaster, toast } from "react-hot-toast";
 import { useNavigate } from 'react-router-dom';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 const Signin= () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -12,8 +11,13 @@ const Signin= () => {
   const navigate = useNavigate();
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if(!password || !email){
+      return toast.error("All fields are required")
+    }
+    if (password.length < 12) {
+      return toast.error("Enter valid Password");
+    }
     try {
-      console.log(email,password)
       const response = await axios.post(`${baseUrl}/api/v1/sign-in`, { email , password });
       
       if(response.status === 200){ 
@@ -36,6 +40,7 @@ const Signin= () => {
 
   return (
     <div className="outerform">
+      <Toaster position='top-right'/>
     <form className="form" onSubmit={handleSubmit}>
       <div className="header">
       <p className='title'>Sign In</p>
@@ -61,7 +66,7 @@ const Signin= () => {
       <div className="flex-row">
        </div>
       <button className="button-submit">Sign In</button>
-      <p>Dont have an account ? : <Link to='/sign-up' style={{textDecoration:"none",fontWeight:"bold",fontSize:"700"}} >Sign up</Link></p>
+      <p>Demo Email : <b>demo@gmail.com </b> <br/>Demo Password : <b>demo@kec-vms</b></p>
     </form>
     </div>
   );

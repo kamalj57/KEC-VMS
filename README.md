@@ -1,6 +1,6 @@
 # KEC VEHICLE MANAGEMENT SYSTEM 🚌
 
-This application was developed during the intra-college event `E-Horyzon'24` and won the prize 🏅 
+This application was developed in two days during the intra-college event `E-Horyzon'24`, where we won a `prize 🏅` 
 
 ## Preview
 ![Screenshot of the App](./images/1.png)
@@ -12,7 +12,7 @@ This application was developed during the intra-college event `E-Horyzon'24` and
   - [**MongoDB**](https://www.mongodb.com/): A NoSQL database for storing data.
   - [**Express**](https://expressjs.com/): A minimal and flexible Node.js web application framework.
   - [**Node.js**](https://nodejs.org/): A JavaScript runtime built on Chrome's V8 JavaScript engine for server-side programming.
-- [**Twilio**](https://www.twilio.com/en-us): Deliver notifications across text, email, voice..
+- [**Twilio**](https://www.twilio.com/en-us): Deliver notifications across text, email, voice.
 
 ## Table of Contents
 
