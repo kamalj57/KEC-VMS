@@ -2,7 +2,7 @@
 import Do from './Dash.module.css';
 import { Link } from 'react-router-dom';
 import Tableadmin from '../AdminTable/Tableadmin';
-import {Home,BusFront,DiamondPlus,Phone,FilePlus2} from 'lucide-react'
+import {Home,BusFront,DiamondPlus,Phone,FilePlus2,LogOut} from 'lucide-react'
 function Dash() {
   return (
     <div>
@@ -28,6 +28,10 @@ function Dash() {
           </div>
           <div className={Do.lk1}>
             <Phone color='white'/>
+             <Link className={Do.lk} to='https://calibertech.netlify.app/'>Contact Us</Link>
+          </div>
+          <div className={Do.lk1}>
+            <LogOut color='white'/>
              <Link className={Do.lk} to='https://calibertech.netlify.app/'>Contact Us</Link>
           </div>
           </div>
