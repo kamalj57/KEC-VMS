@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+
 
 import { Link } from 'react-router-dom';
 import './Navbar.css';
@@ -15,7 +15,7 @@ const Navbar = ({ showMenu, toggleMenu }) => {
         </label>
         <ul id="navbar" className={showMenu ? "show" : ""}>
           <li className="active" >
-            <Link className='Admin' to="/signin" spy={true} smooth={true} offset={-70} duration={800} onClick={toggleMenu}>
+            <Link className='Admin' to="/sign-in" spy={true} smooth={true} offset={-70} duration={800} onClick={toggleMenu}>
               Admin
             </Link>
             <Link className='Tamil' to="/tamil" spy={true} smooth={true} offset={-70} duration={800} onClick={toggleMenu}>

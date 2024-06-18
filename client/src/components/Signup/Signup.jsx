@@ -1,26 +1,28 @@
-import React from 'react';
-import './Signin.css'
+import './Signup.css'
 import { useState } from 'react';
 import axios from 'axios';
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useNavigate } from 'react-router-dom';
-
-const Signin= () => {
-  const [username, setUsername] = useState('');
+import { Link } from 'react-router-dom';
+const Signup= () => {
+  const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const baseUrl=import.meta.env.VITE_REACT_APP_API;
   const navigate = useNavigate();
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    if(password.length<6){
+      return toast.error("Password must be atleast 6 characters")
+    }
     try {
-      const response = await axios.post(`${baseUrl}/api/v1/login`, { username, password });
+      const response = await axios.post(`${baseUrl}/api/v1/sign-up`, { email , password });
       
       if(response.status === 200){ 
         toast.success('Logined successfully!');
-        console.log(response.data);
         setTimeout(()=>{
-          navigate('/dash');;
+          navigate('/dashboard');
         },500)
        
       }
@@ -31,7 +33,6 @@ const Signin= () => {
     } catch (error) {
       toast.error('Failed to Login. Contact administration.');
       console.error('Login failed:', error);
-      console.log(response.data);
       // Handle login error
     }
   };
@@ -40,15 +41,14 @@ const Signin= () => {
     <div className="outerform">
     <form className="form" onSubmit={handleSubmit}>
       <div className="header">
-      <p className='title'>Sign In</p>
-      <p className='description'>Please signin using your admin credentials</p>
+      <p className='title'>Sign Up</p>
       </div>
       <div className="flex-column">
         <label>Email</label>
       </div>
       <div className="inputForm">
         
-        <input type='text' className="input" placeholder="Enter your Email" value={username} onChange={(e) => setUsername(e.target.value)} />
+        <input type='email' className="input" placeholder="Enter your Email" value={email} onChange={(e) => setEmail(e.target.value)} />
       </div>
 
       <div className="flex-column">
@@ -56,16 +56,18 @@ const Signin= () => {
       </div>
       <div className="inputForm">
        
-        <input type="password" className="input" placeholder="Enter your Password" value={password} onChange={(e) => setPassword(e.target.value)}/>
+        <input type="password" className="input" placeholder="Password length should be 6 letters" value={password} onChange={(e) => setPassword(e.target.value)}/>
         
       </div>
 
       <div className="flex-row">
        </div>
-      <button className="button-submit">Sign In</button>
+      <button className="button-submit">Sign Up</button>
+      <p>Already have an account ? : <Link to='/sign-in' style={{textDecoration:"none",fontWeight:"bold",fontSize:"700"}} >Sign in</Link></p>
     </form>
+     
     </div>
   );
 };
 
-export default Signin;
+export default Signup;

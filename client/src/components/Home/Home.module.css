@@ -46,7 +46,7 @@ input[type=search]{
 }
 .img1{
     width: 80%;
-    margin-top: -17%;
+    margin-top: -20%;
     animation: 3s bus ease-in-out;
     z-index: -999;
 }
@@ -59,7 +59,7 @@ input[type=search]{
     background-color: rgb(5, 201, 113);
     width: 160px;
     height: 60px;
-    border-radius: 50px;
+    border-radius: 9px;
     color: rgb(255, 255, 255);
     font-weight: 500;
     transition: 0.5s ease;
@@ -102,7 +102,7 @@ span6{
    
 }
 .busd{
-    margin-top: 40%;
+    margin-top: 24%;
 }
 .busd h1{
     font-size: 30px;
@@ -126,13 +126,16 @@ span6{
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    margin-top: 5%;
+    margin-top: 10px;
 }
 .bud2{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+.bud2 h1{
+    margin-top:2px;
 }
 .deg{
     text-align: center;

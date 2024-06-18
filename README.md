@@ -66,7 +66,11 @@ TWILIO_NUMBER=your_twilio_number  # Update with your my twilio phone number
  cd server
 ```
 ```bash
+<<<<<<< HEAD
 node server.js
+=======
+npm start
+>>>>>>> e9eb459 (update)
 ```
 
 2. **Start the frontend**
@@ -87,3 +91,4 @@ Contributions are welcome! Feel free to open issues and pull requests.
 ## License
 This project is licensed under the MIT License.
 Make sure to replace placeholder values (like `your_mongodb_uri`, `your_twilio_account_id`, `your_twilio_auth_token`, `your_twilio_number`) with your actual credentials.
+

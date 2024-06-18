@@ -1,9 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import  { useState, useEffect } from 'react';
 import axios from 'axios';
-import To from './Table.module.css';
+import To from '../Table/Table.module.css';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import moment from 'moment'
+import {Trash} from 'lucide-react'
+
 function Tableadmin() {
   const [tableData, setTableData] = useState([]);
   const [filters, setFilters] = useState({
@@ -14,7 +16,6 @@ function Tableadmin() {
   });
   const baseUrl=import.meta.env.VITE_REACT_APP_API;
   useEffect(() => {
-    // Fetch data from the server when the component mounts
     fetchData();
   }, []);
 
@@ -46,8 +47,8 @@ function Tableadmin() {
     console.log(id)
     if (shouldDelete) {
       const res= await axios.delete(`${baseUrl}/api/v1/delete/${id}`)
-      .then((res)=> {
-        toast.success('deleted successfully');
+      .then(()=> {
+        toast.success('Deleted successfully');
         fetchData();})
       .catch(()=>{
         toast.error("Failed to delete")
@@ -111,7 +112,7 @@ function Tableadmin() {
              <th>Department</th>
              <th>Last Service</th>
              <th>Next Service</th>
-             <th>Delete Values</th>
+             <th>Action</th>
            </tr>
         </thead>
         <tbody>
@@ -127,7 +128,7 @@ function Tableadmin() {
               <td className={To.column}>{dateFormat(data.next_service)}</td>
               <td className={To.column}>
                 <div className={To.icons1}>
-                 <button onClick={() => handleDeleteRow(data._id)} >Delete</button>
+                 <Trash onClick={() => handleDeleteRow(data._id)} size={24} color='red'/>  
                 </div>
               </td>
             </tr>

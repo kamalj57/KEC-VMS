@@ -1,6 +1,6 @@
-import React from 'react'
-import Navbar from './components/Navbar'
-import Table from './components/Table'
+
+import Navbar from '../Navbar/Navbar'
+import Table from '../Table/Table'
 import './Driver.css';
 
 function Driver() {

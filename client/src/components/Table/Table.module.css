@@ -50,6 +50,8 @@
   gap: 5px;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
+ 
 }
 .iconn,.iconn1{
   font-size: 13px;

@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+
 
 import { Link } from 'react-router-dom';
 import './Navbar.css';
-import Signin from '../components/Signin';
+
 
 const Tamilnav = ({ showMenu, toggleMenu }) => {
   return (
@@ -17,7 +17,7 @@ const Tamilnav = ({ showMenu, toggleMenu }) => {
         </label>
         <ul id="navbar" className={showMenu ? "show" : ""}>
           <li className="active" >
-            <Link className='Admin' to="/signin" spy={true} smooth={true} offset={-70} duration={800} onClick={toggleMenu}>
+            <Link className='Admin' to="/sign-in" spy={true} smooth={true} offset={-70} duration={800} onClick={toggleMenu}>
               நிர்வாகி
             </Link>
             <Link className="Tamil" to="/" spy={true} smooth={true} offset={-70} duration={800} onClick={toggleMenu}>

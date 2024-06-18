@@ -1,8 +1,8 @@
-import React from 'react';
+
 import Do from './Dash.module.css';
 import { Link } from 'react-router-dom';
-import Tableadmin from './components/Tableadmin';
-
+import Tableadmin from '../AdminTable/Tableadmin';
+import {Home,BusFront,DiamondPlus,Phone,FilePlus2} from 'lucide-react'
 function Dash() {
   return (
     <div>
@@ -11,23 +11,24 @@ function Dash() {
           <h1>Admin <span>Panel</span></h1>
           <div className={Do.main12}>
           <div className={Do.lk1}>
+             <Home color="white"/>
              <Link to="/" className={Do.lk}>Home</Link>
           </div>
           <div className={Do.lk1}>
-           
+            <BusFront color='white' />
              <Link className={Do.lk} to='#'>Vehicle Details</Link>
           </div>
           <div className={Do.lk1}>
-           
+            <DiamondPlus color='white'/>
              <Link className={Do.lk} to='/addinfo'>Add New Vehicles</Link>
           </div>
           <div className={Do.lk1}>
-          
+            <FilePlus2 color='white'/>
              <Link className={Do.lk} to='#'>Vehicle Registration</Link>
           </div>
           <div className={Do.lk1}>
-           
-             <Link className={Do.lk} to='#'>Contact Us</Link>
+            <Phone color='white'/>
+             <Link className={Do.lk} to='https://calibertech.netlify.app/'>Contact Us</Link>
           </div>
           </div>
         </div>
@@ -38,7 +39,7 @@ function Dash() {
               <p>Manage Vehicle</p>
             </div>
             <div className={Do.nave2}>
-              <p>College - <span1>Vehicle Management</span1></p>
+              <p>College - <span>Vehicle Management</span></p>
             </div>
            </div>
            <div className={Do.tb}>
