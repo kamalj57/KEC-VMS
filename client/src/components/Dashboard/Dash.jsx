@@ -32,7 +32,7 @@ function Dash() {
           </div>
           <div className={Do.lk1}>
             <LogOut color='white'/>
-             <Link className={Do.lk} to='https://calibertech.netlify.app/'>Contact Us</Link>
+             <Link className={Do.lk} to='/'>Sign Out</Link>
           </div>
           </div>
         </div>
