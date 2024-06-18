@@ -66,11 +66,7 @@ TWILIO_NUMBER=your_twilio_number  # Update with your my twilio phone number
  cd server
 ```
 ```bash
-<<<<<<< HEAD
-node server.js
-=======
 npm start
->>>>>>> e9eb459 (update)
 ```
 
 2. **Start the frontend**
